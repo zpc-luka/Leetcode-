@@ -1,0 +1,49 @@
+给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。
+
+说明：
+
+你的算法应该具有线性时间复杂度。 你可以不使用额外空间来实现吗？
+
+示例 1:
+
+输入: [2,2,1]
+输出: 1
+示例 2:
+
+输入: [4,1,2,1,2]
+输出: 4
+
+
+
+c++:
+1.
+
+int singleNumber(vector<int>& nums) {
+    int tmp = 0;
+    sort(nums.begin(), nums.end());
+    for (int i = 0; i < nums.size(); i+=2) {
+        if (nums[i] != nums[i + 1])
+        {
+            tmp = nums[i];
+            break;
+        }
+    }
+    return tmp;
+}
+
+取决于sort的复杂度
+
+
+
+2.使用异或（比较巧妙）             ！！异或可以解决比较是否相同的问题
+a^b^a = b  交换律和结合律都适用
+
+
+int singleNumber(vector<int>& nums) {
+       int tmp = 0; 
+        for(int i = 0;i < nums.size();i++){   
+            tmp = tmp ^ nums[i];
+        }
+        return tmp;
+    }
+
