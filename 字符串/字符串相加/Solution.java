@@ -16,6 +16,6 @@ class Solution{
             j--;
         }
         ans.reverse();              //这里要反转
-        return ans;
+        return ans.toString();
     }
 }
