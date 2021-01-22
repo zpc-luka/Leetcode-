@@ -18,7 +18,7 @@ class  Solution{
             }
 
             int high = i - 1;
-            StringBuffer temp = new StringBuffer(Integer.toString(low));
+            StringBuffer temp = new StringBuffer(Integer.toString(nums[low]));
             if(low < high){
                 temp.append("->");
                 temp.append(Integer.toString(high));
