@@ -25,5 +25,6 @@ class  Solution{
             }
             res.add(temp.toString());
         }
+        return res;
     }
 }
