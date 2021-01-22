@@ -21,7 +21,7 @@ class  Solution{
             StringBuffer temp = new StringBuffer(Integer.toString(nums[low]));
             if(low < high){
                 temp.append("->");
-                temp.append(Integer.toString(high));
+                temp.append(Integer.toString(nums[high]));
             }
             res.add(temp.toString());
         }
