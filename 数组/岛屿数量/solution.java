@@ -1,5 +1,3 @@
-import javax.xml.stream.XMLOutputFactory;
-
 class Solution {
     public int numIslands(char[][] grid) {
         int m = grid.length;
