@@ -21,7 +21,7 @@ class Solution{
 
     }
 
-    public boolean isAnagram_2(strings s, String t){
+    public boolean isAnagram_2(string s, String t){
         Map<Character, Integer> map = new HashMap<>();
         for (char ch : s.toCharArray()) {
             map.put(ch, map.getOrDefault(ch, 0) + 1);
